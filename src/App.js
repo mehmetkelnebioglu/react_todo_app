@@ -46,11 +46,10 @@ function App() {
 
   const handleFromSumbit= (data)=>{
     console.log('data',data)
-    let arr = formData
-    arr.push(data)
-    setFormData(arr)
+  
+    setFormData([...formData,data])
   }
-console.log('formdata',formData)
+
   return (
     <div className="main-container">
     {/*   <h1>To Do app</h1>
@@ -79,8 +78,23 @@ console.log('formdata',formData)
   
       <div>
         <h3>from values</h3>
-        <p></p>
-        <p></p>
+      a
+      <div>
+        {formData.map((item,i)=>{
+          return(
+            <div style={{
+              display:'flex',
+              flexDirection: 'column',
+              gap: '20px'}}
+            key={i}>
+              <p>Name:{item.name}</p>
+              <p>Email:{item.email}</p>
+            </div>
+
+          )
+        })}
+      </div>
+
       </div>
 
     </div>

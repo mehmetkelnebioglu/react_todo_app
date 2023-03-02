@@ -2,6 +2,7 @@ import "./App.css";
 import Child from "./components/Child";
 import String from "./components/String";
 import User from "./components/User";
+import Form from './components/form'
 
 import { useState } from "react";
 
@@ -26,6 +27,7 @@ function App() {
   ];
 
   const [selectedUser, setSelectedUser] = useState();
+  const [formData,setFormData]=useState([])
 
   const string = "This is a string";
   const number = 10;
@@ -41,9 +43,17 @@ function App() {
   const onButtonMouseEnter = () => {
     setSelectedUser(users[0]);
   };
+
+  const handleFromSumbit= (data)=>{
+    console.log('data',data)
+    let arr = formData
+    arr.push(data)
+    setFormData(arr)
+  }
+console.log('formdata',formData)
   return (
     <div className="main-container">
-      <h1>To Do app</h1>
+    {/*   <h1>To Do app</h1>
       <p>This is a todo app</p>
 
       <button onMouseEnter={onButtonMouseEnter} onClick={onStaticButtonClick}>
@@ -63,8 +73,16 @@ function App() {
             </button>
           );
         })}
+      </div> */}
+       {/* <User users={users} /> */}
+      <Form handleFromSumbit={handleFromSumbit} title={" second React from"}/>
+  
+      <div>
+        <h3>from values</h3>
+        <p></p>
+        <p></p>
       </div>
-      {/* <User users={users} /> */}
+
     </div>
   );
 }

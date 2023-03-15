@@ -2,8 +2,8 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <div>
-            Header11
+        <div className='header'>
+            <strong>TMK TODO APP</strong> 
         </div>
     );
 }

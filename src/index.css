@@ -61,3 +61,57 @@ body {
   align-items: center ;
   justify-content: space-between;
 }
+.btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+}
+.btn:hover {
+  background-color: #222020;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+.task{
+  background-color: #afb431;
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.tasks-wrapper{
+  margin-top : 50px
+}
+.task-reminder{
+  border-left: 5px solid green;
+  
+}
+.btn-delete{
+  color: red;
+ 
+}
+.name-section{
+  display: flex;
+  justify-content: space-between;
+}
+.header{
+  color: red;
+  font-size: larger;
+}
